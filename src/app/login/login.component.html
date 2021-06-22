@@ -12,7 +12,9 @@
     <div class="row">
         <div class="col-12" style="margin-top: 25%; margin-left: 40%;">
             <button type="button" class="btn btn-primary" (click)="signInWithFB()" *ngIf="!user">Login With
-                facebook</button>
+                facebook</button><br><br>
+            <button type="button" class="btn btn-warning" (click)="signInWithGoogle()" *ngIf="!user">Login With
+                Google</button>
         </div>
     </div>
 </div>

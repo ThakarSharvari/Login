@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { SocialAuthService, FacebookLoginProvider } from "angularx-social-login";
+import { SocialAuthService, FacebookLoginProvider, GoogleLoginProvider } from "angularx-social-login";
 import { SocialUser } from "angularx-social-login";
 
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
 
@@ -16,7 +16,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.authService.authState.subscribe((user: SocialUser) => {
-      debugger;
       this.user = user;
       this.loggedIn = (user != null);
     });
@@ -24,6 +23,10 @@ export class LoginComponent implements OnInit {
 
   signInWithFB(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+  }
+
+  signInWithGoogle(): void {
+    this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
   }
 
   signOut(): void {
