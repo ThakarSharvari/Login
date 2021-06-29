@@ -71,7 +71,8 @@
               "browserTarget": "Assignment:build:production"
             },
             "development": {
-              "browserTarget": "Assignment:build:development"
+              "browserTarget": "Assignment:build:development",
+              "ssl": true
             }
           },
           "defaultConfiguration": "development"

@@ -6,17 +6,25 @@ import { HttpClientModule } from '@angular/common/http';
 import { SocialLoginModule, SocialAuthServiceConfig, GoogleLoginProvider } from 'angularx-social-login';
 import { FacebookLoginProvider } from 'angularx-social-login';
 import { CommonModule } from '@angular/common';
+import { LinkedInResponseComponent } from './linked-in-response/linked-in-response.component';
+import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+import { InstaResponseComponent } from './insta-response/insta-response.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    LinkedInResponseComponent,
+    InstaResponseComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     CommonModule,
-    SocialLoginModule
+    SocialLoginModule,
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [
     {

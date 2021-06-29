@@ -14,7 +14,11 @@
             <button type="button" class="btn btn-primary" (click)="signInWithFB()" *ngIf="!user">Login With
                 facebook</button><br><br>
             <button type="button" class="btn btn-warning" (click)="signInWithGoogle()" *ngIf="!user">Login With
-                Google</button>
+                Google</button><br><br>
+            <button type="button" class="btn btn-info" (click)="login()" *ngIf="!user">Login With
+                LinkedIn</button><br><br>
+            <button type="button" class="btn btn-secondary" (click)="instaLogin()" *ngIf="!user">Login With
+                Instagram</button>
         </div>
     </div>
 </div>
