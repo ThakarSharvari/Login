@@ -14,6 +14,7 @@ export class InstaResponseComponent implements OnInit {
 
   ngOnInit(): void {
     this.instaToken = this.route.snapshot.queryParams["code"];
+    console.log("Insta ---", this.instaToken)
   }
 
 }
